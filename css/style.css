@@ -5,13 +5,13 @@
 
    1. At a viewport width of 32.5em
       and bigger, .subscribe and 
-      .recent-episodes should go next to 
+      .recent-episodes-col should go next to 
       one another(display: flex; flex-direction: row, Make a column)
 
   2.  They should both be equal in width
       until .subscribe (max-width: 25rem flex-grow: 1;)reaches a width
       of 25rem, at which point it no longer
-      grows anymore, and .recent-episodes(flex-grow:1; )
+      grows anymore, and .recent-episodes-col(flex-grow:1; )
       continues to grow to take up the 
       rest of the available space
 */
@@ -22,11 +22,17 @@
     flex-direction: column;
 }
 
+/* set background-color of 
+grasscast-col to green */
+.grasscast-col {
+    background-color: hsl(155, 97%, 24%);
+}
+
 /* NOTE: flex-container is a block-level element, It does not need to be flex, since the layout is a 2 column vertical grid */
 
 /* Adjust container sizes when width reaches 32.5em */
 @media (min-width: 32.5em) {
-      /* Change the direction of flex-row, at the container level.  This will make grasscast and recent-episodes containers display as columns */
+      /* Change the direction of flex-row, at the container level.  This will make grasscast and recent-episodes-col containers display as columns */
   .flex-row {
     flex-direction: row;
 }
@@ -41,10 +47,10 @@
     background: salmon;
   }
 
-  /* Grab the first flex-col */
+  /* Grab the first flex-col,
+  grasscast-col and change color
+  to orange*/
   .flex-col:nth-of-type(1) {
-    /* flex-direction: row; */
-    color: white;
     background-color: orange;
   }
 
@@ -61,8 +67,9 @@
   }
   
   /* flex-grow is a flex-item property */
-  .recent-episodes {
+  .recent-episodes-col {
       flex-grow: 1;
+      padding: 32px;
   }
 
   /* flex-grow and max-width are flex-item properties, max-width, stops flex-grow at a certain width*/

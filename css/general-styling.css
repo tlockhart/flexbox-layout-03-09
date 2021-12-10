@@ -47,7 +47,7 @@ select {
   margin-top: var(--flow-spacing, 1em);
 }
 
-.container {
+.flex-container {
   padding: 0 2em;
   max-width: 78rem;
   margin: 0 auto;
@@ -113,13 +113,13 @@ select {
   padding: 2rem;
 }
 
-.recent-episodes {
+/* .recent-episodes {
   background: hsl(0, 0%, 90%);
-}
+} */
 
-.recent-episodes > * {
+/* .recent-episodes > * {
   margin: 2rem;
-}
+} */
 
 .episode-card + .episode-card {
   margin-top: 3rem;
